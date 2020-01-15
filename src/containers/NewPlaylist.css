@@ -1,0 +1,17 @@
+article {
+	display: flex;
+	align-items: center;	
+	padding: 8px 12px;
+	margin: 0 auto;
+
+}
+.playlistThumb {
+
+height :70px;
+border-radius: 4px;
+
+}
+
+.playlistDetails {
+	padding: 8px 22px;
+}

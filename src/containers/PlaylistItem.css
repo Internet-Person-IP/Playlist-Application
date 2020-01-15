@@ -1,0 +1,44 @@
+article {
+	display: flex;
+	align-items: center;	
+	padding: 8px 12px;
+	margin: 0 auto;
+
+}
+
+@mixin font-base{
+	padding: 0;
+	margin: 0;
+	line-height: 1.3;
+	font-weight: 600;
+}
+
+h4 {
+	@include font-base;
+
+}
+
+p{
+	@include font-base;
+}
+
+
+.PlaylistItem:hover {
+	border-radius: 8px;
+	background-color: lightgrey;
+}
+
+.thumb {
+
+height :70px;
+border-radius: 4px;
+
+}
+
+.Number {
+	padding: 16px;
+
+}
+.details {
+	padding: 8px 22px;
+}

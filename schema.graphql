@@ -1,0 +1,32 @@
+type userPlaylists @model {
+	id:ID!
+	CognitoID: String!
+	Playlists: [Playlist] @connection(name:"userPlaylists",sortField: "createdAt")
+}
+
+type Playlist @model{
+  id: ID!
+  name: String!
+  createdAt: String
+  userPlaylists:userPlaylists @connection(name:"userPlaylists",sortField: "createdAt")
+  Songs: [Song] @connection(name:"ShowPlaylist", sortField: "createdAt")
+}
+
+type Song @model (subscriptions: null){
+	id: ID!	
+	thumbnail: String!
+	time: String!
+	url: String!
+	name: String!	
+	createdAt: String
+	playlistID: ID!
+	playlist: Playlist @connection(name:"ShowPlaylist", sortField: "createdAt")
+
+}
+
+type Subscription{
+	onCreateSong(playlistID: ID!): Song
+	@aws_subscribe(mutations: ["createSong"])
+	onDeleteSong(playlistID: ID!): Song
+	@aws_subscribe(mutations: ["deleteSong"])
+}
