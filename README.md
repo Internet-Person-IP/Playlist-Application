@@ -1,7 +1,7 @@
 #  Playlist Application
 
-
-
+##Abstract
+This webapp enables multiple people to contribute music to a playlist. This project was created with AWS in the backend and used React for the frontend. The backend consisted of a GraphQL database using AWS AppSync. The project was also hosted on AWS. The purpose of the application was to learn more about how to create a full-stack severless project using AWS.
 ## Chapters
 ### 1. [Introduction](#introduction)
 ### 2. [Background and Complications](#background-and-complications)
@@ -9,12 +9,6 @@
 ### 4. [Code](#code)
 ### 5. [Application Flow](#application-flow)
 ### 6. [Future](#future)
-
-//ändra we i texten skriv i
-//Vad? Hur? Goal? Yes
-//Future gör det klar vad du ska göra
-//Change playlistURL.png
-//ApplicationFlow -> Usage
 
 ## Introduction
 This application is a Fullstack project with a complete Frontend and Backend, and the project is also hosted on [AWS](https://aws.amazon.com/what-is-aws/). This application was created to enable multiple people to contribute music/videos to a playlist. The created playlists can only be played by the person who created the playlist. The purpose of this application is to be used in social gatherings or parties where multiple people want to suggest songs to be played. In this application, all they have to do is follow the link with the correct ID and they will be able to contribute whatever song/video they want.  All the code is commented. In this documentation, there will be links to the files.
@@ -44,11 +38,7 @@ Authentication is done in [src/App.js](https://github.com/Internet-Person-IP/Pla
 
 The main application is in [Playlist.js](https://github.com/Internet-Person-IP/Playlist-Application/blob/master/src/containers/Playlist.js). Here we can see how the CRUD operations are used to create/delete songs in the playlist. We are also able to see how the subscription is handled in the code. The actual queries can be viewed in [src/graphql/](https://github.com/Internet-Person-IP/Playlist-Application/tree/master/src/graphql). Here you will be able to see the specific queries sent to the GraphQL API. In [Playlist.js](https://github.com/Internet-Person-IP/Playlist-Application/blob/master/src/containers/Playlist.js) you will be able to observe how I managed the change of songs automatically to the next song in the playlist but also how the owner can change song by clicking a specific song. Another important aspect is the player that was used. There exist an npm package called [ReactPlayer](https://www.npmjs.com/package/react-player) this component had specific props that were important. There was a onEnd prop that made it possible to run a function when a song had ended. Which aided with the switch to the next song.
 
-
-## Bugs
-The only bug that I am currently aware of is that if you refresh the page where while you are getting your verification code you will be unable to Sign Up. Currently, there are no plans to fix this bug. Another problem that currently exists is that all playlists have the same thumbnail. Also currently there is no way for the users to change passwords or emails. Another issue is that there is no way to delete a playlist. 
-
-## Application Flow
+## Usage
 The Application Flow is simple enough but I want to make it 100% clear for people if there happens to be any confusion.
 
 ### 1. The User has to Sign Up for the application
@@ -101,10 +91,12 @@ The user that is not the owner will have a different view compared to the owner.
 
 ## Future
 
-The future of this application is not fully clear. I will most likely add Spotify and SoundCloud support to make it able to play Spotify music as well as music from youtube. There are also plans for Mobile Version of this application using React Native.
+I will add Spotify and SoundCloud support to make it able to play Spotify music as well as music from youtube. There are also plans for Mobile Version of this application using React Native.
 
 Possible in the future there will be an indication of which song is currently playing. This notification will be sent to people that are not the owner of the playlist.
 
+## Bugs
+The only bug that I am currently aware of is that if you refresh the page where while you are getting your verification code you will be unable to Sign Up. Another problem that currently exists is that all playlists have the same thumbnail. Also currently there is no way for the users to change passwords or emails. Another issue is that there is no way to delete a playlist. 
 
 
 
