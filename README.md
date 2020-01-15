@@ -1,6 +1,6 @@
 #  Playlist Application
 
-##Abstract
+## Abstract
 This webapp enables multiple people to contribute music to a playlist. This project was created with AWS in the backend and used React for the frontend. The backend consisted of a GraphQL database using AWS AppSync. The project was also hosted on AWS. The purpose of the application was to learn more about how to create a full-stack severless project using AWS.
 ## Chapters
 ### 1. [Introduction](#introduction)
